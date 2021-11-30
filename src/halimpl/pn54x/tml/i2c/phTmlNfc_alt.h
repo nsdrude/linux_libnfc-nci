@@ -28,7 +28,7 @@
  *  3 = OM557x on BeagleBone black
  *
  */
-#define CONFIGURATION    1
+#define CONFIGURATION    4
 
 #if (CONFIGURATION == 1)
 /* OM557x on Raspberry Pi */
@@ -48,6 +48,12 @@
  #define I2C_ADDRESS     0x28
  #define PIN_INT         61
  #define PIN_ENABLE      30
+#elif (CONFIGURATION == 4)
+/* OM557x on VAR-SOM-MX8 */
+ #define I2C_BUS         "/dev/i2c-0"
+ #define I2C_ADDRESS     0x28
+ #define PIN_INT         16
+ #define PIN_ENABLE      110
 #else
 /* Custom configuration */
  #define I2C_BUS         "/dev/i2c-1"
