@@ -45,7 +45,10 @@ const char * NXPLOG_ITEM_HCPR    = "NxpHcpR:     ";
 static pthread_mutex_t cs_mutex;
 
 /* global log level structure */
-nci_log_level_t gLog_level;
+nci_log_level_t gLog_level = {
+    .global_log_level = NXPLOG_LOG_DEBUG_LOGLEVEL,
+};
+
 /*******************************************************************************
  *
  * Function         phNxpLog_SetGlobalLogLevel
